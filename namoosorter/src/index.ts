@@ -1,24 +1,8 @@
 import NamooSorter from "./NamooSorter";
+import NumbersCollection from "./NumbersCollection";
 
-let sorter = new NamooSorter([10, -7, 22, 3, 15]);
-console.log(sorter.sort());
+let numCollection = new NumbersCollection([10, -7, 55, 3, 21]);
 
-sorter = new NamooSorter('TypeScript');
-console.log(sorter.sort());
-
-// let data : string | number[];
-
-// function isString(data: string | number[]): data is string {
-//     return( <string>data ).split !== undefined;
-// }
-
-// if(typeof data === 'string') {
-
-// }
-
-// data = 'TypeScript';
-// if(isString(data)) {
-//     data.split('');
-// }else {
-//     // number[]
-// }
+let sorter = new NamooSorter(numCollection);
+sorter.sort();
+console.log(sorter.getCollection);
