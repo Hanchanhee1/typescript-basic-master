@@ -17,5 +17,8 @@ class NamooSorter {
             }
         }
     }
+    printCollection() {
+        console.log(this.collection);
+    }
 }
 exports.default = NamooSorter;

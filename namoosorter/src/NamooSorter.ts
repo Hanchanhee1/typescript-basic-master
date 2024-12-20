@@ -1,8 +1,14 @@
 import NumbersCollection from "./NumbersCollection";
 
+interface Sortable {
+    length : number;
+    compare(leftIndex: number, rightIndex : number) : boolean;
+    swap(leftIndex: number, rightIndex : number) : void;
+}
+
 class NamooSorter {
 
-    constructor(private collection : NumbersCollection) {}
+    constructor(private collection : Sortable) {}
 
     get getCollection() {
         return this.collection;
@@ -19,6 +25,10 @@ class NamooSorter {
                 }
             }
         }
+    }
+
+    printCollection() {
+        console.log(this.collection);
     }
 }
 
